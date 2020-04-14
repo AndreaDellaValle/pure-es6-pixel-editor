@@ -1,0 +1,7 @@
+{
+  "defaults": {
+    "squaresNumber": 16,
+    "color": "#ff0000",
+    "canvasSize": 420
+  }
+}

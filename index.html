@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>JS Pixel Editor</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header><h1>pixel editor</h1></header>
+    <div class="container">
+      <div class="left-container">
+        <div class="color-box">
+          <p class="color-box-text"></p>
+        </div>  
+        <div class="picker-container">
+          <!-- <input class="picker" type="range" orient="vertical" /> -->
+          <canvas class="picker" width="30"></canvas>
+          <div class="slider-cursor"></div>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <div class="inputs-container">
+          <input type="number" class="grid-size-left" step="1" min="2" max="100" />
+          <img class="divider" src="./src/assets/img/cross-icon.svg" />
+          <input type="number" class="grid-size-right" step="1" min="2" max="100" />
+        </div>
+    
+        <div class="canvas-container">
+          <div class="center-canvas">
+            <canvas class="drawing-grid" z-index="0"></canvas>
+          </div>
+          <!-- <svg class="drawing-grid" xmlns="http://www.w3.org/2000/svg"></svg> -->
+        </div>
+
+        <div class="btn-container">
+          <button class="download-btn">
+            <img src="./src/assets/img/download-icon.svg" />
+            Download
+          </button>
+          <a class="image-link" hidden></a>
+        </div>
+      </div>
+
+    </div>
+    
+    <script src="./index.js"></script>
+  </body>
+</html>

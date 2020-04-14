@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "GravitoniumSans-Regular";
+  src: url("./src/assets/fonts/GravitoniumSans-Regular.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+/*
+ * Actually I'm not able to find the right font for
+ * the numbers and the Download button label so
+ * CerebriSans is the best fallback that I can provide
+ */
+@font-face {
+  font-family: "CerebriSans-Regular";
+  src: url("./src/assets/fonts/CerebriSans-Regular.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  --radius: 4px;
+  --canvas-size: 0;
+  --font-size: 14px;
+  --slider-position: 0px;
+  --color-box-bg: #ff0000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size);
+}
+
+header {
+  color: #2C67FF;
+  background-color: #F6F9FF;
+  padding: 16px 0;
+}
+
+header h1 {
+  width: 768px;
+  margin: 0 auto;
+  font-family: "GravitoniumSans-Regular", sans-serif;
+}
+
+.container {
+  padding: 16px;
+  display: block;
+  margin: 0 auto;
+  width: 768px;
+  margin-top: 30px;
+}
+
+.canvas-container {
+  width: 600px;
+  border-radius: var(--radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+}
+
+.center-canvas {
+  display: block;
+  margin: 0 auto;
+  padding: 1px 0;
+  width: var(--canvas-size);
+}
+
+.picker-container, .right-container, .left-container {
+  float: left;
+}
+
+.left-container {
+  margin-right: 60px;
+}
+
+.picker-container {
+  position: relative;
+  width: 100%;
+}
+
+.color-box {
+  width: 64px;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  padding: 1px 20px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  mix-blend-mode: color;
+  text-transform: uppercase;
+  font-size: var(--font-size);
+  border-radius: var(--radius);
+  background-color: var(--color-box-bg);
+}
+
+.color-box-text {
+  padding-bottom: 1px;
+  margin: 11px auto;
+  border-bottom: 1px solid white;
+  font-family: "CerebriSans-Regular", sans-serif;
+}
+
+.inputs-container {
+  margin-bottom: 30px;
+}
+
+.grid-size-left, .grid-size-right {
+  padding: 12px 42px 12px 12px;
+  display: inline;
+  color: #646464;
+  outline: none;
+  font-size: var(--font-size);
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius);
+  font-family: "CerebriSans-Regular", sans-serif;
+}
+
+.divider {
+  display: inline;
+  margin: 0 10px;
+}
+
+.picker {
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+  border: none;
+}
+
+.slider-cursor {
+  height: 0px;
+  width: 30px;
+  position: absolute;
+  left: calc(50% - 15px);
+  top: var(--slider-position);
+  background-color: transparent;
+}
+
+.slider-cursor::before {
+  width: 0;
+  height: 0;
+  top: -15px;
+  left: -35px;
+  content: '';
+  position: absolute;
+  border-radius: var(--radius);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid var(--color-box-bg);
+}
+
+.slider-cursor::after {
+  width: 0;
+  height: 0;
+  top: -15px;
+  left: 50px;
+  content: '';
+  position: absolute;
+  border-radius: var(--radius);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid var(--color-box-bg);
+}
+
+.download-btn {
+  color: #fff;
+  border: none;
+  float: right;
+  outline: none;
+  margin-top: 30px;
+  padding: 14px 24px;
+  background-color: #2C67FF;
+  font-size: var(--font-size);
+  border-radius: var(--radius);
+  font-family: "CerebriSans-Regular", sans-serif;
+}
+
+.download-btn:active {
+  background-color: rgb(34, 75, 177);
+}
+
+.download-btn > img {
+  vertical-align: middle;
+  padding-right: 12px;
+}
